@@ -13,6 +13,10 @@ export async function signUp(req, res) {
     if(found) {
         return res.status(409).json({ message : `${email}은 이미 존재합니다.`})
     }
+    const foundusername = await userRepository.findByUsername(username);
+    if(foundusername) {
+        return res.status(409).json({ message : `${username}은 이미 존재합니다.`})
+    }
     const hashed = await bcrypt.hash(password, bcryptSaltRounds);
     const userId = await userRepository.createUser({
         username,
@@ -20,7 +24,7 @@ export async function signUp(req, res) {
         password : hashed,
     })
     const token = createJwtToken(userId);
-    res.status(201).json({token, email});
+    res.status(201).json({token, username});
 }
 
 export async function login(req, res) {
@@ -34,9 +38,26 @@ export async function login(req, res) {
         return res.status(401).json({ message : `email 혹은 password를 확인해주세요`});
     }
     const token = createJwtToken(user.id);
-    res.status(201).json({token, email});
+    const username = user.username;
+    res.status(201).json({token, username});
 }
 
 function createJwtToken(id) {
     return jwt.sign({id}, jwtSecretKey, {expiresIn : jwtExpiresInDays});
+}
+
+export async function me(req, res, next) {
+    const user = await userRepository.findById(req.userId);
+    if(!user) {
+        return res.status(404).json({message : 'User not found'})
+    }
+    res.status(200).json( { token : req.token, username : user.username})
+}
+
+export async function normalUser(req, res, next) {
+    const createTime = new Date().toString();
+    const temporaryText = await bcrypt.hash(createTime, bcryptSaltRounds);
+    const userId = temporaryText.substring(0,5);
+    const token = createJwtToken(userId);
+    res.status(201).json({token, userId});
 }
