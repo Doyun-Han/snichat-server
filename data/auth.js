@@ -2,6 +2,7 @@ let users = [
     {
         id : '1',
         username : 'han',
+        email : 'doyun@abcd.com',
         password : '$2b$08$mAk3XvUGTnTqbPfUWsDtkuwnBg6taL.Jld.HjgVjzWXzMbkk1Kyn6'
     }
 ]

@@ -10,21 +10,24 @@ const lists = {
                     sender : "han",
                     sendTime : "2022-08-31 10:00:00",
                     text : "Hi my name is Han",
-                    listName : "Jordan1"
+                    listName : "Jordan1",
+                    userid : '1'
                 },
                 {
                     id : "1",
                     sender : "David",
                     sendTime : "2022-08-31 10:00:00",
                     text : "Hi my name is David",
-                    listName : "Jordan1"
+                    listName : "Jordan1",
+                    userid : '1'
                 },
                 {
                     id : "2",
                     sender : "han",
                     sendTime : "2022-08-31 10:00:00",
                     text : "Hi my name is Nice to meet you!",
-                    listName : "Jordan1"
+                    listName : "Jordan1",
+                    userid : '1'
                 }
             ]
         },
