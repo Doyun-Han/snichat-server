@@ -8,7 +8,7 @@ const router = express.Router();
 
 router.get('/', dataController.getAlldata);
 
-router.post('/',[body('text').trim().isLength({min : 3}).withMessage('최소 3자 이상 이여야합니다.'),validate], dataController.postMsg)
+router.post('/',[body('text').trim().isLength({min : 2}).withMessage('최소 2자 이상 이여야합니다.'),validate], dataController.postMsg)
 
 router.delete('/', dataController.removeMsg);
 

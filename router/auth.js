@@ -30,6 +30,6 @@ router.post('/login', validateCridential, authController.login )
 
 router.post('/signup',validateSignUp, authController.signUp);
 
-router.get('/me', isAuth, authController.me);
+router.get('/', authController.normalUser);
 
 export default router

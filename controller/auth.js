@@ -24,7 +24,7 @@ export async function signUp(req, res) {
         password : hashed,
     })
     const token = createJwtToken(userId);
-    res.status(201).json({token, username});
+    res.status(201).json({token, username, auth: true});
 }
 
 export async function login(req, res) {
@@ -39,7 +39,8 @@ export async function login(req, res) {
     }
     const token = createJwtToken(user.id);
     const username = user.username;
-    res.status(201).json({token, username});
+    const auth = user.auth
+    res.status(201).json({token, username, auth});
 }
 
 function createJwtToken(id) {
@@ -57,7 +58,7 @@ export async function me(req, res, next) {
 export async function normalUser(req, res, next) {
     const createTime = new Date().toString();
     const temporaryText = await bcrypt.hash(createTime, bcryptSaltRounds);
-    const userId = temporaryText.substring(0,5);
-    const token = createJwtToken(userId);
-    res.status(201).json({token, userId});
+    const username = temporaryText.substring(0,5);
+    const token = createJwtToken(username);
+    res.status(201).json({token, username, auth : false, userid : createTime});
 }
