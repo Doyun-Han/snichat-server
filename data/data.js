@@ -2,7 +2,7 @@ const lists = {
     lists : [
         {
             listIMG : "",
-            listName : "Jordan1",
+            listName : "jordanHigh",
             listCreateTime : "2022-08-31",
             listMsg : [
                 {
@@ -10,7 +10,7 @@ const lists = {
                     sender : "han",
                     sendTime : "2022-08-31 10:00:00",
                     text : "Hi my name is Han",
-                    listName : "Jordan1",
+                    listName : "jordanHigh",
                     userid : '1'
                 },
                 {
@@ -18,7 +18,7 @@ const lists = {
                     sender : "David",
                     sendTime : "2022-08-31 10:00:00",
                     text : "Hi my name is David",
-                    listName : "Jordan1",
+                    listName : "jordanHigh",
                     userid : '2'
                 },
                 {
@@ -26,14 +26,14 @@ const lists = {
                     sender : "han",
                     sendTime : "2022-08-31 10:00:00",
                     text : "Hi my name is Nice to meet you!",
-                    listName : "Jordan1",
+                    listName : "jordanHigh",
                     userid : '1'
                 }
             ]
         },
         {
             listIMG : "",
-            listName : "Jordan2",
+            listName : "jordanRow",
             listCreateTime : "2022-08-30",
             listMsg : [
                 {
@@ -41,7 +41,7 @@ const lists = {
                     sender : "han",
                     sendTime : "2022-08-31 10:00:00",
                     text : "Hi my name is Han",
-                    listName : "Jordan2",
+                    listName : "jordanRow",
                     userid : '1'
                 },
                 {
@@ -49,7 +49,7 @@ const lists = {
                     sender : "David",
                     sendTime : "2022-08-31 10:00:00",
                     text : "Hi my name is David",
-                    listName : "Jordan2",
+                    listName : "jordanRow",
                     userid : '2'
                 },
                 {
@@ -57,14 +57,14 @@ const lists = {
                     sender : "han",
                     sendTime : "2022-08-31 10:00:00",
                     text : "I like jordan1",
-                    listName : "Jordan2",
+                    listName : "jordanRow",
                     userid : '1'
                 }
             ]
         },
         {
             listIMG : "",
-            listName : "Jordan3",
+            listName : "newbalance992",
             listCreateTime : "2022-08-29",
             listMsg : [
                 {
@@ -72,7 +72,7 @@ const lists = {
                     sender : "han",
                     sendTime : "2022-08-31 10:00:00",
                     text : "Hi my name is Han",
-                    listName : "Jordan3",
+                    listName : "newbalance992",
                     userid : '1'
                 },
                 {
@@ -80,7 +80,7 @@ const lists = {
                     sender : "David",
                     sendTime : "2022-08-31 10:00:00",
                     text : "Hi my name is David",
-                    listName : "Jordan3",
+                    listName : "newbalance992",
                     userid : '2'
                 },
                 {
@@ -88,7 +88,7 @@ const lists = {
                     sender : "han",
                     sendTime : "2022-08-31 10:00:00",
                     text : "I want to buy it!",
-                    listName : "Jordan3",
+                    listName : "newbalance992",
                     userid : '1'
                 }
             ]
